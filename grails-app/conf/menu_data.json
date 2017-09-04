@@ -1,0 +1,96 @@
+{
+    "sections": [
+        { 
+            "caption": "GENERAL",
+            "menues": [
+                {  
+                    "caption": "Home",
+                    "icon": "fa-home",
+                    "items": [
+                       {"caption": "Dashboard 1", "link":"#", "controller":"na", "view":"na"},
+                       {"caption": "Dashboard 2", "link":"#", "controller":"na", "view":"na"},
+                       {"caption": "Dashboard 3", "link":"#", "controller":"na", "view":"na"}
+                    ]
+                },
+                {  
+                    "caption": "Forms",
+                    "icon": "fa-home",
+                    "items": [
+                        {"caption":"General form", "link":"#", "controller":"na", "view":"na"},
+                        {"caption":"Advanced form", "link":"#", "controller":"na", "view":"na"},
+                        {"caption":"Form validation", "link":"#", "controller":"na", "view":"na"},
+                        {"caption":"Form wizzard", "link":"#", "controller":"na", "view":"na"},
+                        {"caption":"Form wizard", "link":"#", "controller":"na", "view":"na"},
+                        {"caption":"Form upload", "link":"#", "controller":"na", "view":"na"},
+                        {"caption":"Form buttons", "link":"#", "controller":"na", "view":"na"}                        
+                    ]
+                }  ,
+                {  
+                    "caption": "UI Elements",
+                    "icon": "fa-home",
+                    "items": [
+                        {"caption":"General Elements","link":"#", "controller":"na", "view":"na"},
+                        {"caption":"Media Gallery", "link":"#", "controller":"na", "view":"na"},
+                        {"caption":"Typography", "link":"#", "controller":"na", "view":"na"},
+                        {"caption":"Glyphicons","link":"#", "controller":"na", "view":"na"},
+                        {"caption":"Widgets","link":"#", "controller":"na", "view":"na"},
+                        {"caption":"Inbox","link":"#", "controller":"na", "view":"na"},
+                        {"caption":"Calendar","link":"#", "controller":"na", "view":"na"}                        
+                    ]
+                },
+                {  
+                    "caption": "Tables",
+                    "icon": "fa-home",
+                    "items": [
+                        {"caption":"Tables","link":"#", "controller":"na", "view":"na"},
+                        {"caption":"Tables dynamic", "link":"#", "controller":"na", "view":"na"}                        
+                    ]
+                },
+                {  
+                    "caption": "Data presentation",
+                    "icon": "fa-home",
+                    "items": [
+                        {"caption":"Chart JS","link":"#", "controller":"na", "view":"na"},
+                        {"caption":"Chart JS2", "link":"#", "controller":"na", "view":"na"},
+                        {"caption":"Moris JS", "link":"#", "controller":"na", "view":"na"},
+                        {"caption":"ECharts", "link":"#", "controller":"na", "view":"na"},
+                        {"caption":"Other Charts ", "link":"#", "controller":"na", "view":"na"}                        
+                    ]
+                },
+                {  
+                    "caption": "Layouts",
+                    "icon": "fa-home",
+                    "items": [
+                        {"caption":"Fixed sidebar","link":"#", "controller":"na", "view":"na"},
+                        {"caption":"Fixed footer", "link":"#", "controller":"na", "view":"na"}                        
+                    ]
+                }
+            ]
+        },
+        {
+            "caption": "LIVE ON", 
+            "menues": [
+                {  
+                    "caption": "Additional pages",
+                    "icon": "fa-home",
+                    "items": [
+                       {"caption": "Dashboard 1", "link":"#", "controller":"na", "view":"na"},
+                       {"caption": "Dashboard 2", "link":"#", "controller":"na", "view":"na"},
+                       {"caption": "Dashboard 3", "link":"#", "controller":"na", "view":"na"}
+                    ]
+                },
+                {  
+                    "caption": "Extras",
+                    "icon": "fa-home",
+                    "items": [
+                       {"caption": "Dashboard 1", "link":"#", "controller":"na", "view":"na"},
+                       {"caption": "Dashboard 2", "link":"#", "controller":"na", "view":"na"},
+                       {"caption": "Dashboard 3", "link":"#", "controller":"na", "view":"na"}
+                    ]
+                }                
+
+            ]            
+        }
+
+    ]
+}
