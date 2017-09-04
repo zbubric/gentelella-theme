@@ -1,5 +1,8 @@
 package gentelella.theme
 
+import groovy.json.JsonSlurper
+import groovy.xml.MarkupBuilder
+
 class GentelellaTagLib {
     static namespace = "gent"
     // static defaultEncodeAs = [taglib:'text']
