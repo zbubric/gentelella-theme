@@ -34,14 +34,14 @@ if (console) {
 updateStatus "Copying gentelella theme files"
 mkdir "grails-app/views/layouts/gentelella"
 copy {
-    from resources("gentelella/layouts/gentelella/*.gsp")
+    from resources("/gentelella/layouts/gentelella/*.gsp")
     into "grails-app/views/layouts/gentelella"
 }    
 
 // Replace common static views with Gentelella version
-updateStatus "Copying customised static views"
+updateStatus "Copying customized static views"
 copy {
-    from resources("/gentelella/staticViews/*.gsp")
+    from resources("/gentelella/static-views/*.gsp")
     into "grails-app/views"
 }
 
@@ -50,12 +50,9 @@ copy {
 updateStatus "Copying gentelella scaffolding templates"
 mkdir "src/main/templates/scaffolding"
 copy {
-	from templates("scaffolding/*.gsp")
-	into "src/main/templates/scaffolding"
+    from resources("/gentelella/scaffolding/*.*")
+    into "/src/main/templates/scaffolding"
 }
-copy {
-	from templates("scaffolding/*.groovy")
-	into "src/main/templates/scaffolding"
-}
+
 
 addStatus "Gentelella theme installation complete"

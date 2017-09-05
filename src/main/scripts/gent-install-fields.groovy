@@ -33,7 +33,7 @@ def folderList = ['boolean', 'date', 'default', 'oneToMany', 'radioGroup']
 folderList.each{ name ->
     mkdir "grails-app/views/_fields/$name"
     copy {
-        from resources("gentelella/fields/_fields/$name/*.gsp")
+        from resources("/gentelella/fields/$name/*.gsp")
         into "grails-app/views/_fields/$name"
     }
 }   

@@ -90,30 +90,40 @@ assets {
 
 // Copy gentelella theme files
 task copyThemeFiles(type: Copy) {
-    from "${project.projectDir}/grails-app/views/layouts"
-    into "${processResources.destinationDir}/gentelella/layouts"    
+    from "grails-app/views/layouts"
+    into "build/resources/main/gentelella/layouts"
 }
 
 // Copy customised static views
 task copyStaticViews(type: Copy) {
     from "${project.projectDir}/grails-app/views"
-    into "${processResources.destinationDir}/gentelella/staticViews"    
-    include '*.gsp'
+    into "build/resources/main/gentelella/static-views"    
+    include '*.gsp'    
 }
 
 // Copy fields rendering definitions
 task copyFieldsFiles(type: Copy) {
-    from "${project.projectDir}/grails-app/views/_fields"
-    into "${processResources.destinationDir}/gentelella/fields"    
+    from "grails-app/views/_fields"
+    into "build/resources/main/gentelella/fields"
 }
 
 // Copy tables/list rendering definitions
 task copyTableListFiles(type: Copy) {
-    from "${project.projectDir}/grails-app/views/templates"
-    into "${processResources.destinationDir}/gentelella/fields/templates"    
+    from "/grails-app/views/templates"
+    into "build/resources/main/gentelella/fields/templates"  
 }
 
+// Copy tables/list rendering definitions
+task copyScaffoldTemplates(type: Copy) {
+    from "/src/main/templates/scaffolding"
+    into "build/resources/main/gentelella/scaffolding"  
+}
 
+//noinspection GroovyAssignabilityCheck
+processResources.finalizedBy copyScaffoldTemplates, copyStaticViews, copyThemeFiles, copyFieldsFiles, copyTableListFiles
+
+/*
 processResources{
     dependsOn copyStaticViews, copyThemeFiles, copyFieldsFiles, copyTableListFiles
 }
+*/
