@@ -48,7 +48,6 @@
             </div>
 
             <!-- top navigation -->
-            <!-- <g:render template="/layouts/gentelella/topNavigation" /> -->
             <gent:topMenu>
                 <!-- dropDown menu -->
                 <gent:topMenuDropdown>
@@ -73,10 +72,6 @@
             <!-- page content -->
             <div class="right_col" role="main">
                 <g:layoutBody/>
-
-                <a data-toggle="tooltip" data-placement="top" title="Lock">
-                    <span class="fa fa-paw" aria-hidden="true"></span>
-                </a>
             </div>
             <!-- /page content -->
 

@@ -3,16 +3,16 @@ updateStatus """
 WARNING: Script will overwrite and/or create files within your application!!!
 
 Following files and folders will be created or overwritten (if exists):
-    - Scaffolding templates: 
-        src/main/templates/scaffolding/*
+    - gentelella layout files
+        grails-app/views/layouts/gentelella.gsp
     - Static View Files:
         grails-app/views/error.gsp
         grails-app/views/index.gsp
-        grails-app/views/notFound.gsp
-    - gentelella layout files
-        grails-app/views/layouts/gentelella/*
+        grails-app/views/notFound.gsp        
     - gentelella menu config file
         grails-app/conf/menuConf.json        
+    - Scaffolding templates: 
+        src/main/templates/scaffolding/*
 
 It is recomended to backup your files before runing the script!
 
@@ -34,10 +34,9 @@ if (console) {
 
 // Copy gentelella theme files
 updateStatus "Copying gentelella theme files"
-mkdir "grails-app/views/layouts/gentelella"
 copy {
-    from resources("/gentelella/layouts/gentelella/*.gsp")
-    into "grails-app/views/layouts/gentelella"
+    from resources("/gentelella/layouts/*.gsp")
+    into "grails-app/views/layouts"
 }
 
 // Copy gentelella menu config

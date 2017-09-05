@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta name="layout" content="gentelella/main" />
+    <meta name="layout" content="gentelella" />
     <title>Welcome to Grails - gentelella</title>
 
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />

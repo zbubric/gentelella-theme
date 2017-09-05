@@ -12,7 +12,7 @@ buildscript {
 }
 
 version "0.0.1"
-group "brl.grails.theme.gentelella"
+group "brl.grails.themes"
 
 apply plugin:"eclipse"
 apply plugin:"idea"
@@ -91,6 +91,7 @@ assets {
 task copyThemeFiles(type: Copy) {
     from "grails-app/views/layouts"
     into "build/resources/main/gentelella/layouts"
+    exclude "main.gsp"
 }
 
 // Copy customised static views
