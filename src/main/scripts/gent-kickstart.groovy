@@ -11,6 +11,8 @@ Following files and folders will be created or overwritten (if exists):
         grails-app/views/notFound.gsp
     - gentelella layout files
         grails-app/views/layouts/gentelella/*
+    - gentelella menu config file
+        grails-app/conf/menuConf.json        
 
 It is recomended to backup your files before runing the script!
 
@@ -36,6 +38,13 @@ mkdir "grails-app/views/layouts/gentelella"
 copy {
     from resources("/gentelella/layouts/gentelella/*.gsp")
     into "grails-app/views/layouts/gentelella"
+}
+
+// Copy gentelella menu config
+updateStatus "Copying gentelella menu config"
+copy {
+    from resources("/gentelella/conf/*.json")
+    into "/grails-app/conf"
 }    
 
 // Replace common static views with Gentelella version

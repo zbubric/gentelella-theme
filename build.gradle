@@ -119,8 +119,14 @@ task copyScaffoldTemplates(type: Copy) {
     into "build/resources/main/gentelella/scaffolding"  
 }
 
+// Copy default menu configuration
+task copyConfigs(type: Copy) {
+    from "/grails-app/conf/menuConf.json"
+    into "build/resources/main/gentelella/conf"  
+}
+
 //noinspection GroovyAssignabilityCheck
-processResources.finalizedBy copyScaffoldTemplates, copyStaticViews, copyThemeFiles, copyFieldsFiles, copyTableListFiles
+processResources.finalizedBy copyConfigs, copyScaffoldTemplates, copyStaticViews, copyThemeFiles, copyFieldsFiles, copyTableListFiles
 
 /*
 processResources{
