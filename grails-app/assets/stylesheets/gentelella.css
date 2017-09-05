@@ -1,0 +1,17 @@
+/*
+*
+*= require bootstrap/dist/css/bootstrap.min.css
+*= require exa-datatables-bootstrap3
+*= require font-awesome/css/font-awesome.min.css
+*= require nprogress/nprogress.css
+*= require iCheck/skins/flat/green.css
+*= require bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css
+*= require pnotify/dist/pnotify.css
+*= require pnotify/dist/pnotify.buttons.css
+*= require pnotify/dist/pnotify.nonblock.css
+*= require custom.css
+*/
+
+.btn.btn-app {
+    margin: 0 0 5px 0px;
+}

@@ -21,41 +21,73 @@
         <div class="main_container">
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
-                    <div class="navbar nav_title" style="border: 0;">
-                        <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
-                    </div>
+                    <!-- Nav title section -->
+                    <gent:navTitle />
 
                     <div class="clearfix"></div>
 
                     <!-- menu profile quick info -->
-                    <gent:userProfile name="John Doe" greeting="Howdy, " />
+                    <gent:profileInfo name="John Doe" greeting="Howdy, " />
                     <!-- /menu profile quick info -->
 
                     <br />
 
                     <!-- sidebar menu -->
-                    <gent:menu />
+                    <gent:mainMenu />
                     <!-- /sidebar menu -->
 
-                    <!-- /menu footer buttons -->
-                    <g:render template="/layouts/gentelella/sideMenuFooter" />
+                    <!-- /menu footer area with buttons -->
+                    <div class="sidebar-footer hidden-small">
+                        <gent:tooltipLink title="Settings" icon="glyphicon glyphicon-cog" />
+                        <gent:tooltipLink title="FullScreen" icon="glyphicon glyphicon-fullscreen" />
+                        <gent:tooltipLink title="Lock" icon="glyphicon glyphicon-eye-close" />
+                        <gent:tooltipLink title="Logout" icon="glyphicon glyphicon-off" />
+                    </div>
                     <!-- /menu footer buttons -->
                 </div>
             </div>
 
             <!-- top navigation -->
-            <g:render template="/layouts/gentelella/topNavigation" />
+            <!-- <g:render template="/layouts/gentelella/topNavigation" /> -->
+            <gent:topMenu>
+                <!-- dropDown menu -->
+                <gent:topMenuDropdown>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                </gent:topMenuDropdown>
+
+                <gent:topMenuPresentation icon="fa-envelope-o" badge="bg-green" badgeValue="10">
+                    <gent:msgList>
+                        <gent:msgListItem caption="John Doe" sideCaption="3 minutes ago">This is message 1</gent:msgListItem>
+                        <gent:msgListItem caption="Zoran Doe" sideCaption="3 minutes ago">This is message 2</gent:msgListItem>
+                        <gent:msgListItem caption="Zoran Doe" sideCaption="3 minutes ago">This is message 3</gent:msgListItem>
+                    </gent:msgList>
+
+                </gent:topMenuPresentation>
+
+            </gent:topMenu>
             <!-- /top navigation -->
 
             <!-- page content -->
             <div class="right_col" role="main">
                 <g:layoutBody/>
+
+                <a data-toggle="tooltip" data-placement="top" title="Lock">
+                    <span class="fa fa-paw" aria-hidden="true"></span>
+                </a>
             </div>
             <!-- /page content -->
 
-            <!-- footer content -->
-            <g:render template="/layouts/gentelella/footer" />
-            <!-- /footer content -->
+            <!-- Footer area-->
+            <footer>
+                <div class="pull-right">
+                    Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+            <!-- /footer area -->
 
         </div>
     </div>

@@ -11,8 +11,8 @@ buildscript {
     }
 }
 
-version "0.1"
-group "gentelella.theme"
+version "0.0.1"
+group "brl.grails.theme.gentelella"
 
 apply plugin:"eclipse"
 apply plugin:"idea"
@@ -66,16 +66,15 @@ bootRun {
 // enable if you wish to package this plugin as a standalone application
 bootRepackage.enabled = false
 grailsPublish {
-    // TODO: Provide values here
-    user = 'user'
-    key = 'key'
     githubSlug = 'foo/bar'
     license {
-        name = 'Apache-2.0'
+        name = 'MIT'
     }
-    title = "My Plugin"
-    desc = "Full plugin description"
-    developers = [johndoe:"John Doe"]
+    title = "Grails Gentelella theme"
+    desc = """Port of Gentelella theme for Grails 3.x Fw.
+    Gentelella Admin is a Bootstrap3 based admin template packed with
+    variety of powerful jQuery plugins and tools."""
+    developers = [zbubric:"Zoran Bubric"]
 }
 
 
