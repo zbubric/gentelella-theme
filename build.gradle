@@ -12,7 +12,7 @@ buildscript {
 }
 
 version "0.1.0"
-group "brl.grails.plugins"
+group "org.grails.plugins"
 
 apply plugin:"eclipse"
 apply plugin:"idea"
@@ -125,11 +125,6 @@ task copyConfigs(type: Copy) {
     into "build/resources/main/gentelella/conf"  
 }
 
-//noinspection GroovyAssignabilityCheck
+// Make sure to actually copy needed files
 processResources.finalizedBy copyConfigs, copyScaffoldTemplates, copyStaticViews, copyThemeFiles, copyFieldsFiles, copyTableListFiles
 
-/*
-processResources{
-    dependsOn copyStaticViews, copyThemeFiles, copyFieldsFiles, copyTableListFiles
-}
-*/
