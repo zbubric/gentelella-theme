@@ -5,18 +5,18 @@ import grails.plugins.*
 class gentelellaThemeGrailsPlugin extends Plugin {
 
     // the version or versions of Grails the plugin is designed for
-    def grailsVersion = "3.3.0 > *"
+    def grailsVersion = "3.1.0 > *"
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
     ]
 
-    // TODO Fill in these fields
-    def title = "gentelella Theme" // Headline display name of the plugin
+    
+    def title = "Gentelella Theme" // Headline display name of the plugin
     def author = "Zoran Bubric"
     def authorEmail = "zbubric@gmail.com"
-    def description = '''\
-Port of gentelella Admin bootstrap theme to be used with Grails application
-'''
+    def description = """Port of Gentelella theme for Grails 3.x Fw.
+    Gentelella Admin is a Bootstrap3 based admin template packed with
+    variety of powerful jQuery plugins and tools."""
     def profiles = ['web']
 
     // URL to the plugin's documentation
@@ -25,7 +25,7 @@ Port of gentelella Admin bootstrap theme to be used with Grails application
     // Extra (optional) plugin metadata
 
     // License: one of 'APACHE', 'GPL2', 'GPL3'
-//    def license = "APACHE"
+    def license = "MIT"
 
     // Details of company behind the plugin (if there is one)
 //    def organization = [ name: "My Company", url: "http://www.my-company.com/" ]
