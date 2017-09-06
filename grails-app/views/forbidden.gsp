@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Page Not Found</title>
+    <title>Forbidden</title>
 
     <asset:stylesheet src="gentelella.css" />
 </head>
@@ -23,14 +23,14 @@
     <div class="col-md-12">
         <div class="col-middle">
             <div class="text-center text-center">
-                <h1 class="error-number">404</h1>
-                <h2>Sorry but we couldn't find this page</h2>
-                <p>This page you are looking for does not exist: ${request.forwardURI}
-                </p>
+                <h1 class="error-number">403</h1>
+                <h2>Access denied</h2>
+                <p>Full authentication is required to access this resource.</p>
             </div>
         </div>
     </div>
     <!-- /page content -->
+
 </body>
 
 
