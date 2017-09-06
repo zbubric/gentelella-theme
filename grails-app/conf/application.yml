@@ -2,7 +2,7 @@
 grails:
     profile: web-plugin
     codegen:
-        defaultPackage: gentelella.theme
+        defaultPackage: brl.grails.plugins.gentelella-theme
     spring:
         transactionManagement:
             proxies: false

@@ -11,8 +11,8 @@ buildscript {
     }
 }
 
-version "0.0.1"
-group "brl.grails.themes"
+version "0.1.0"
+group "brl.grails.plugins"
 
 apply plugin:"eclipse"
 apply plugin:"idea"
