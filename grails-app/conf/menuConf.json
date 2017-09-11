@@ -1,95 +1,85 @@
 {
-    "sections": [
-        { 
+    "sections": [{
             "caption": "GENERAL",
-            "menues": [
-                {  
+            "menues": [{
                     "caption": "Home",
-                    "icon": "fa-home",
+                    "icon": "fa fa-home",
                     "items": [
-                       {"caption": "Dashboard 1", "href":"#", "controller":"na", "action":"na"},
-                       {"caption": "Dashboard 2", "href":"#", "controller":"na", "action":"na"},
-                       {"caption": "Dashboard 3", "href":"#", "controller":"na", "action":"na"}
-                    ]           
+                        { "caption": "Grails Link 1", "controller": "someController" },
+                        { "caption": "Grails Link 2", "controller": "someController", "action": "list" },
+                        { "caption": "Grails Link 3", "controller": "someController", "action": "view", "id": "99" },
+                        { "caption": "Grails Link 4", "controller": "someController", "action": "view", "id": "99", "params": { "sort": "title", "order": "asc", "author": "currentBook.author" } }
+                    ]
                 },
-                {  
+                {
                     "caption": "Forms",
-                    "icon": "fa-home",
+                    "icon": "fa fa-edit",
                     "items": [
-                        {"caption":"General form", "href":"#", "controller":"na", "action":"na"},
-                        {"caption":"Advanced form", "href":"#", "controller":"na", "action":"na"},
-                        {"caption":"Form validation", "href":"#", "controller":"na", "action":"na"},
-                        {"caption":"Form wizzard", "href":"#", "controller":"na", "action":"na"},
-                        {"caption":"Form wizard", "href":"#", "controller":"na", "action":"na"},
-                        {"caption":"Form upload", "href":"#", "controller":"na", "action":"na"},
-                        {"caption":"Form buttons", "href":"#", "controller":"na", "action":"na"}                        
+                        { "caption": "General form", "href": "#", "controller": "na", "action": "na" },
+                        { "caption": "Advanced form", "href": "#", "controller": "na", "action": "na" },
+                        { "caption": "Form validation", "href": "#", "controller": "na", "action": "na" },
+                        { "caption": "Form wizard", "href": "#", "controller": "na", "action": "na" },
+                        { "caption": "Form upload", "href": "#", "controller": "na", "action": "na" },
+                        { "caption": "Form buttons", "href": "#", "controller": "na", "action": "na" }
                     ]
-                }  ,
-                {  
+                },
+                {
                     "caption": "UI Elements",
-                    "icon": "fa-home",
+                    "icon": "fa fa-desktop",
                     "items": [
-                        {"caption":"General Elements","href":"#", "controller":"na", "action":"na"},
-                        {"caption":"Media Gallery", "href":"#", "controller":"na", "action":"na"},
-                        {"caption":"Typography", "href":"#", "controller":"na", "action":"na"},
-                        {"caption":"Glyphicons","href":"#", "controller":"na", "action":"na"},
-                        {"caption":"Widgets","href":"#", "controller":"na", "action":"na"},
-                        {"caption":"Inbox","href":"#", "controller":"na", "action":"na"},
-                        {"caption":"Calendar","href":"#", "controller":"na", "action":"na"}                        
+                        { "caption": "General Elements", "href": "#", "controller": "na", "action": "na" },
+                        { "caption": "Media Gallery", "href": "#", "controller": "na", "action": "na" },
+                        { "caption": "Typography", "href": "#", "controller": "na", "action": "na" },
+                        { "caption": "Glyphicons", "href": "#", "controller": "na", "action": "na" },
+                        { "caption": "Widgets", "href": "#", "controller": "na", "action": "na" },
+                        { "caption": "Inbox", "href": "#", "controller": "na", "action": "na" },
+                        { "caption": "Calendar", "href": "#", "controller": "na", "action": "na" }
                     ]
                 },
-                {  
+                {
                     "caption": "Tables",
-                    "icon": "fa-home",
+                    "icon": "fa fa-table",
                     "items": [
-                        {"caption":"Tables","href":"#", "controller":"na", "action":"na"},
-                        {"caption":"Tables dynamic", "href":"#", "controller":"na", "action":"na"}                        
+                        { "caption": "Tables", "href": "#", "controller": "na", "action": "na" },
+                        { "caption": "Tables dynamic", "href": "#", "controller": "na", "action": "na" }
                     ]
                 },
-                {  
+                {
                     "caption": "Data presentation",
-                    "icon": "fa-home",
+                    "icon": "fa fa-bar-chart-o",
                     "items": [
-                        {"caption":"Chart JS","href":"#", "controller":"na", "action":"na"},
-                        {"caption":"Chart JS2", "href":"#", "controller":"na", "action":"na"},
-                        {"caption":"Moris JS", "href":"#", "controller":"na", "action":"na"},
-                        {"caption":"ECharts", "href":"#", "controller":"na", "action":"na"},
-                        {"caption":"Other Charts ", "href":"#", "controller":"na", "action":"na"}                        
+                        { "caption": "Chart JS", "href": "#", "controller": "na", "action": "na" },
+                        { "caption": "Chart JS2", "href": "#", "controller": "na", "action": "na" },
+                        { "caption": "Moris JS", "href": "#", "controller": "na", "action": "na" },
+                        { "caption": "ECharts", "href": "#", "controller": "na", "action": "na" },
+                        { "caption": "Other Charts ", "href": "#", "controller": "na", "action": "na" }
                     ]
                 },
-                {  
+                {
                     "caption": "Layouts",
-                    "icon": "fa-home",
+                    "icon": "fa fa-clone",
                     "items": [
-                        {"caption":"Fixed sidebar","href":"#", "controller":"na", "action":"na"},
-                        {"caption":"Fixed footer", "href":"#", "controller":"na", "action":"na"}                        
+                        { "caption": "Fixed sidebar", "href": "#", "controller": "na", "action": "na" },
+                        { "caption": "Fixed footer", "href": "#", "controller": "na", "action": "na" }
                     ]
                 }
             ]
         },
         {
-            "caption": "LIVE ON", 
-            "menues": [
-                {  
-                    "caption": "Additional pages",
-                    "icon": "fa-home",
-                    "items": [
-                       {"caption": "Dashboard 1", "href":"#", "controller":"na", "action":"na"},
-                       {"caption": "Dashboard 2", "href":"#", "controller":"na", "action":"na"},
-                       {"caption": "Dashboard 3", "href":"#", "controller":"na", "action":"na"}
-                    ]
-                },
-                {  
+            "caption": "LIVE ON",
+            "menues": [{
                     "caption": "Extras",
-                    "icon": "fa-home",
+                    "icon": "fa fa-windows",
                     "items": [
-                       {"caption": "Dashboard 1", "href":"#", "controller":"na", "action":"na"},
-                       {"caption": "Dashboard 2", "href":"#", "controller":"na", "action":"na"},
-                       {"caption": "Dashboard 3", "href":"#", "controller":"na", "action":"na"}
+                        { "caption": "Plain page", "href": "#", "controller": "na", "action": "na" },
+                        { "caption": "Login", "href": "#", "controller": "na", "action": "na" },
+                        { "caption": "403 Error", "href": "#", "controller": "na", "action": "na" },
+                        { "caption": "404 Error", "href": "#", "controller": "na", "action": "na" },
+                        { "caption": "500 Error", "href": "#", "controller": "na", "action": "na" }
                     ]
-                }                
+                }
 
-            ]            
+            ]
         }
 
     ]
