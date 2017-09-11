@@ -9,9 +9,59 @@
 *= require pnotify/dist/pnotify.css
 *= require pnotify/dist/pnotify.buttons.css
 *= require pnotify/dist/pnotify.nonblock.css
-*= require custom.css
+*= require custom.min.css
 */
 
 .btn.btn-app {
     margin: 0 0 5px 0px;
+}
+
+
+/* Override min-width to avoid spacing if 
+panel have less than three buttons */
+
+.panel_toolbox {
+    min-width: 0;
+}
+
+
+/* Pagination styling - just a temporary solution*/
+
+.step {
+    padding: 10px;
+    color: #73879C;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+
+.nextLink {
+    padding: 10px;
+    color: #73879C;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+
+.prevLink {
+    padding: 10px;
+    color: #73879C;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+
+.currentStep {
+    padding: 10px;
+    background-color: #EDEDED;
+    color: #789CC4;
+    border: 1px solid #EDEDED;
+}
+
+.step.gap {
+    display: none;
+}
+
+.step:hover:not(.active) {
+    background-color: #ddd;
 }

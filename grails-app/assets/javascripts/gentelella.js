@@ -14,6 +14,7 @@
 //= require pnotify/dist/pnotify.nonblock.js
 //= require custom.js
 
+/*
 $(document).ready(function() {
 
     // prepare all datepicker fields
@@ -23,3 +24,4 @@ $(document).ready(function() {
     });
 
 });
+*/
