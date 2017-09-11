@@ -45,10 +45,7 @@ class GentelellaLayoutTagLib {
         def writer = new StringWriter()
         def menu = new MarkupBuilder(writer)
 
-        menu{
-            // main menu wrapper div
-            div(id:"sidebar-menu", 'class':"main_menu_side hidden-print main_menu"){
-
+        menu.div(id:"sidebar-menu", 'class':"main_menu_side hidden-print main_menu"){
                 // if content is empty - display error
                 if( !content ){
                     p("ERROR: Menu structure not loaded")
@@ -63,7 +60,7 @@ class GentelellaLayoutTagLib {
                                 section.menues.each{ menuGroup ->
                                     li{
                                         a{
-                                            i('class':"fa $menuGroup.icon", '') 
+                                            i('class':"$menuGroup.icon", '') 
                                             mkp.yield(menuGroup.caption) 
                                             span('class':"fa fa-chevron-down", '')
                                         }
@@ -73,7 +70,14 @@ class GentelellaLayoutTagLib {
                                                 li{
                                                     // if direct href is not defined - create g:link
                                                     if( !item.href ){
-                                                        "asdfasdf"
+                                                        println item.params
+                                                        mkp.yieldUnescaped(                                                             
+                                                            g.link(
+                                                                controller: item.controller, 
+                                                                action: item.action,
+                                                                id: item.id,
+                                                                params: item.params) 
+                                                                {item.caption} )
                                                     } else {
                                                         a(href:item.href, item.caption)
                                                     }
@@ -91,7 +95,7 @@ class GentelellaLayoutTagLib {
                 }
 
             }
-        }
+        
         out << writer
     }    
 

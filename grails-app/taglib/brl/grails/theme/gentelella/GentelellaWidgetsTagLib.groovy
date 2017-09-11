@@ -1,9 +1,81 @@
 package brl.grails.theme.gentelella
 
+import groovy.xml.MarkupBuilder
+
 class GentelellaWidgetsTagLib {
     static namespace = "gent"
     //static defaultEncodeAs = [taglib:'html']
     //static encodeAsForTags = [tagName: [taglib:'html'], otherTagName: [taglib:'none']]
+
+
+    /**
+      * Renders a Panel element as a content placeholder
+      *
+      * @attr title REQUIRED Title of panel
+      * @attr closeBtn Show close button (default: true)
+      * @attr minBtn Show min button (default: true)
+      * @attr settingsLinks List of links to be displayed
+      * within setting area. If empty, settings area will not be shown
+      * List format: [title:'Title 1',href:'#'],[title:'Title 1',href:'#']]
+      */
+    def panel = { attrs, body -> 
+        def title = attrs.title
+        def closeBtn = attrs.closeBtn ? attrs.closeBtn.toBoolean() : true
+        def minBtn = attrs.minBtn ? attrs.minBtn.toBoolean() : true
+        def settingsLinks = attrs.settingsLinks
+
+        def writer = new StringWriter()
+        def uiPanel = new MarkupBuilder(writer)
+
+        uiPanel.div('class':"x_panel " + attrs.class){
+
+                div('class':"x_title"){  
+                    h2(title)
+                    // button panel
+                    ul('class':"nav navbar-right panel_toolbox"){
+                        // collapse btn
+                        if(minBtn){                            
+                            li{
+                                a('class':'collapse-link'){
+                                    i('class':'fa fa-chevron-down','')
+                                }
+                            }
+                        }
+                        
+                        if( settingsLinks && (settingsLinks instanceof Collection)){
+                            li('class':'dropdown'){
+                                a(href:'#', 'class':'dropdown-toggle', 'data-toggle':'dropdown', 'role':'button', 'aria-expanded':'false'){
+                                    i('class':'fa fa-wrench','')
+                                }
+                                ul('class':'dropdown-menu', 'role':'menu'){
+                                    settingsLinks.each{ item ->
+                                        li{
+                                            a(href:item.href, item.title)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        // close btn
+                        if(closeBtn){                            
+                            li{
+                                a('class':'close-link'){
+                                    i('class':'fa fa-close','')
+                                }
+                            }                              
+                        }
+                    }
+                    div('class':'clearfix','')
+                }
+                
+                div('class':'x_content'){
+                    mkp.yieldUnescaped( body() )
+                }                                    
+            }   
+         
+        out << writer
+    } 
 
     /**
       * Renders (and use jscript to trigger it) a pNotify notification 
@@ -109,6 +181,68 @@ class GentelellaWidgetsTagLib {
         out << "    <span class='${iconClass}' aria-hidden='true'></span>"
         out << "</a>"
     }    
+
+    /**
+      * Renders a information panel (can be used for showing numbers and trends)
+      *
+      * @attr highlight REQUIRED Highlighted information (usually number)
+      * @attr icon Icon class to be displayed
+      * @attr title REQUIRED Title area text
+      * @attr subtitle REQUIRED Subtitle area text
+      */
+    def infoWidget = { attrs, body ->
+        def highlight = attrs.highlight
+        def icon = attrs.icon
+        def title = attrs.title ?: ""
+        def subtitle = attrs.subtitle ?: "" 
+        // if css class is not defined, use default ones (sizing)
+        def cssClass = attrs.class ?: "col-lg-3 col-md-3 col-sm-6 col-xs-12"        
+
+        out << "<div class='animated flipInY ${cssClass}'>"
+        out << "    <div class='tile-stats'>"
+        if( icon ){
+        out << "        <div class='icon'><i class='${icon}'></i>"
+        }
+        out << "        </div>"
+        out << "        <div class='count'>${highlight}</div>"
+        out << "        <h3>${title}</h3>"
+        out << "        <p>${subtitle}</p>"
+        out << "    </div>"
+        out << "</div>"
+    }
+
+    /**
+      * Renders a tally widget
+      *
+      * @attr title REQUIRED Title area text
+      * @attr ribbon Ribbon (highlighted) area text
+      */
+    def tallyWidget = { attrs, body ->
+        def title = attrs.title ?: ""
+        def ribbon = attrs.ribbon
+        // if css class is not defined, use default ones (sizing)
+        def cssClass = attrs.class ?: "col-md-3 col-xs-12"
+
+        out << "<div class='widget widget_tally_box ${cssClass}'>"
+        out << "    <div class='x_panel ui-ribbon-container fixed_height_390'>"
+        if( ribbon ){
+            out << "    <div class='ui-ribbon-wrapper'>"
+            out << "        <div class='ui-ribbon'>"
+            out << "        ${ribbon}"
+            out << "        </div>"
+            out << "    </div>"
+        }
+
+        out << "    <div class='x_title'>"
+        out << "        <h2>${title}</h2>"
+        out << "        <div class='clearfix'></div>"
+        out << "    </div>"
+        out << "    <div class='x_content'>"
+        out << body()
+        out << "    </div>"
+        out << "    </div>"
+        out << "</div>"
+    }
 
 }
 
