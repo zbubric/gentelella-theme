@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Gentelella Alela! | </title>
+    <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
 
     <!-- Grails Assets -->
     <asset:stylesheet src="gentelella.css" />

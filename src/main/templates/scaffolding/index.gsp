@@ -37,13 +37,7 @@
             </div>
 
             <div class="x_content">
-                <exa:datatable id="${propertyName}Table" items="\${${propertyName}List}" add="ctrls" reorder="ctrls">
-
-                    <exa:customColumn name="ctrls">
-                        <a href="/\${entityName}/show/\${it?.id}"><i class="fa fa-search"></i></a>
-                        <a href="/\${entityName}/edit/\${it?.id}"><i class="fa fa-edit"></i></a>
-                    </exa:customColumn>
-                </exa:datatable>
+                <f:table collection="\${${propertyName}List}" />
             </div>
 
             <div class="pagination">
