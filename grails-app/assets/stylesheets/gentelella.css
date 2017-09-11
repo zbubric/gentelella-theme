@@ -9,8 +9,11 @@
 *= require pnotify/dist/pnotify.css
 *= require pnotify/dist/pnotify.buttons.css
 *= require pnotify/dist/pnotify.nonblock.css
-*= require custom.min.css
+*= require gentelellaOrigin.min.css
 */
+
+
+/* Align top toolbar with panel position */
 
 .btn.btn-app {
     margin: 0 0 5px 0px;
