@@ -1,1 +1,1 @@
-<g:textField class="form-control datepicker has-feedback-left" name="${property}" value="${value}.format('DD/MM/YYYY')"  />
+<g:textField class="form-control datepicker has-feedback-left" data-date-format="DD/MM/YYYY" name="${property}" value="${value}.format('DD/MM/YYYY')" />
