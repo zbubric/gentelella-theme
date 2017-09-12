@@ -11,7 +11,6 @@
  */
 $(document).ready(function() {
     $('.datepicker').datetimepicker({
-        //format: 'L',              
         format: 'DD/MM/YYYY'
     });
 
