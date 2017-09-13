@@ -1,4 +1,3 @@
-s
 <!DOCTYPE html>
 <html>
 
@@ -58,7 +57,7 @@ s
                 <br>
                 <g:form resource="\${this.${propertyName}}" method="POST" class="form-horizontal form-label-left">
 
-                    <f:all bean="${propertyName}" widget-class="form-control" />
+                    <f:all bean="${propertyName}" theme="gentelella" widget-class="form-control" />
                     <div class="ln_solid"></div>
                     <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
