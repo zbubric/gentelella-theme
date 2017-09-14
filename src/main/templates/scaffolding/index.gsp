@@ -37,7 +37,7 @@
             </div>
 
             <div class="x_content">
-                <f:table collection="\${${propertyName}List}" theme="gentelella" />
+                <f:table collection="\${${propertyName}List}" />
             </div>
 
             <div class="pagination">

@@ -44,7 +44,7 @@
             <div class="x_content">
                 <br>
 
-                <f:display bean="${propertyName}" theme="gentelella" />
+                <f:display bean="${propertyName}" />
 
                 <g:form resource="\${this.${propertyName}}" method="DELETE">
                     <div class="ln_solid"></div>
