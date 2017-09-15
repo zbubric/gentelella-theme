@@ -11,18 +11,12 @@
 
 <body>
 
+    <!--Flash info messages -->
     <g:if test="\${flash.message}">
-        <div class="message" role="status">\${flash.message}</div>
+        <gent:pnotify type="info" title="Info">
+            \${flash.message}
+        </gent:pnotify>
     </g:if>
-    <g:hasErrors bean="\${this.${propertyName}}">
-        <ul class="errors" role="alert">
-            <g:eachError bean="\${this.${propertyName}}" var="error">
-                <li <g:if test="\${error in org.springframework.validation.FieldError}">data-field-id="\${error.field}"</g:if>>
-                    <g:message error="\${error}" />
-                </li>
-            </g:eachError>
-        </ul>
-    </g:hasErrors>
 
     <!-- gentelella -->
     <div class="col-md-12 col-sm-12 col-xs-12">

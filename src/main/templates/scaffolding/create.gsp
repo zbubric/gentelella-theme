@@ -18,21 +18,6 @@
         </gent:pnotify>
     </g:if>
 
-    <!--Error messages -->
-    <g:hasErrors bean="\${this.${propertyName}}">
-        <gent:pnotify type="error" title="Error">
-            <g:message error="\${error}" /><br/>
-        </gent:pnotify>
-
-        <ul class="errors" role="alert">
-            <g:eachError bean="\${this.${propertyName}}" var="error">
-                <li <g:if test="\${error in org.springframework.validation.FieldError}">data-field-id="\${error.field}"</g:if>>
-                    <g:message error="\${error}" />
-                </li>
-            </g:eachError>
-        </ul>
-    </g:hasErrors>
-
     <!-- gentelella -->
     <div class="col-md-12 col-sm-12 col-xs-12">
 

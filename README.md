@@ -8,7 +8,7 @@ Still activelly developing.
 - [ ] Integrate Select2 component
 - [ ] Integrate masked input component phase #1
 - [ ] Fix notifications
-- [ ] Implement field-level error handling
+- [+] Implement field-level error handling
 - [ ] Move fields definition into theme (open issue in fields plugin)
 - [ ] Prepare asciidoc documentation
 - [ ] Prepare and publish demo project

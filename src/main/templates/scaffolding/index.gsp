@@ -10,8 +10,11 @@
 </head>
 
 <body>
+    <!--Flash info messages -->
     <g:if test="\${flash.message}">
-        <div class="message" role="status">\${flash.message}</div>
+        <gent:pnotify type="info" title="Info">
+            \${flash.message}
+        </gent:pnotify>
     </g:if>
 
     <!-- gentelella -->
