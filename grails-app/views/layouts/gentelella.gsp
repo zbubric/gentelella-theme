@@ -87,10 +87,12 @@
 
         </div>
     </div>
-
+    <!-- Grails Assets -->
+    <asset:javascript src="gentelella.js" />
+    <!-- Load notifications -->
+    <g:pageProperty name="page.notifications" />
 </body>
 
-<!-- Grails Assets -->
-<asset:javascript src="gentelella.js" />
+
 
 </html>

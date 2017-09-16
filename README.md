@@ -7,7 +7,7 @@ Still activelly developing.
 - [ ] Finish DatePicker component
 - [ ] Integrate Select2 component
 - [ ] Integrate masked input component phase #1
-- [ ] Fix notifications
+- [+] Fix notifications
 - [+] Implement field-level error handling
 - [ ] Move fields definition into theme (open issue in fields plugin)
 - [ ] Prepare asciidoc documentation

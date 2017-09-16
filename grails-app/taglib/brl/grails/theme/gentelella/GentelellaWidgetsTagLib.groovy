@@ -102,7 +102,6 @@ class GentelellaWidgetsTagLib {
                         });
             });        
         """
-
         // open javascript block
         out << "<script type=\"text/javascript\">"
 
