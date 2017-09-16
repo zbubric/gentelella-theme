@@ -49,9 +49,9 @@
                         <div class="ln_solid"></div>
                         <div class="form-group">
                             <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                                <button class="btn btn-primary" type="reset">Reset</button>
-                                <g:link class="btn btn-primary" url="\${request.getHeader('referer')}"> \${message(code: 'default.button.cancel.label', default: 'cancel')} </g:link>
-                                <g:submitButton name="update" class="save btn btn-success" value="\${message(code: 'default.button.edit.label', default: 'edit')}" />
+                                <g:submitButton name="save" class="save btn btn-success" value="\${message(code: 'default.button.save.label', default: 'save')}" />
+                                <g:link class="btn btn-primary" controller="${propertyName}" action="index">${message(code: 'default.button.cancel.label', default: 'cancel')}</g:link>
+                                <button class="btn btn-primary" type="reset">${message(code: 'default.button.reset.label', default: 'reset')}</button>
                             </div>
                         </div>
 
