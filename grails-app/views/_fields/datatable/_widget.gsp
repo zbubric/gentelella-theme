@@ -1,1 +1,0 @@
-<f:table editable="true" collection="${value}" />
