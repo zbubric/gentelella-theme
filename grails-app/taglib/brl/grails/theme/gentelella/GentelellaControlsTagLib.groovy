@@ -64,12 +64,14 @@ class GentelellaControlsTagLib {
         }
 
         dataSet.each{ item ->
+            def selected = values?.find{ it.id == item.id } ? true : false
             out << "<div class='checkbox'>"
             out << "<label>"
-            out << "<g:checkBox class='flat' name='${propertyName}' value='${item?.id}' checked='${values?.find { p -> p.id == item.id }}'/> ${item}"
+            out << "<input type='checkbox' class='flat' name='${propertyName}' value='${item?.id}' ${selected ? 'checked' : ''}/> ${item}"
             out << "</label>"
             out << "</div>"
         }
+
 
 
     } 

@@ -1,1 +1,1 @@
-<gentelella:checkBoxGroup propertyName="${property}" values="${value}" persistentProperty="${persistentProperty}" />
+<gent:checkBoxGroup propertyName="${property}" values="${value}" persistentProperty="${persistentProperty}" />
