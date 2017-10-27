@@ -28,7 +28,6 @@ $(document).ready(function() {
     // Load Select2 component for select controls
     $('.select2').select2();
 
-
     // Load input masks for all fields
     $(".masked").inputmask();
 
