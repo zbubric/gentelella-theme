@@ -1,0 +1,1 @@
+<gent:pillBox propertyName="${property}" values="${value}" persistentProperty="${persistentProperty}" />
