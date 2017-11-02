@@ -28,6 +28,16 @@ $(document).ready(function() {
     // Load Select2 component for select controls
     $('.select2').select2();
 
+    // Load Switchery components
+    if ($(".switch")[0]) {
+        var elems = Array.prototype.slice.call(document.querySelectorAll('.switch'));
+        elems.forEach(function(html) {
+            var switchery = new Switchery(html, {
+                color: '#26B99A'
+            });
+        });
+    };
+
     // Load input masks for all fields
     $(".masked").inputmask();
 
