@@ -1,1 +1,0 @@
-<f:input bean="${bean}" property="${property}" class="${attrs['class']} select2" />
