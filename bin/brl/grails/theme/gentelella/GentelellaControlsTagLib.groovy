@@ -64,15 +64,58 @@ class GentelellaControlsTagLib {
         }
 
         dataSet.each{ item ->
+            def selected = values?.find{ it.id == item.id } ? true : false
             out << "<div class='checkbox'>"
             out << "<label>"
-            out << "<g:checkBox class='flat' name='${propertyName}' value='${item?.id}' checked='${values?.find { p -> p.id == item.id }}'/> ${item}"
+            out << "<input type='checkbox' class='flat' name='${propertyName}' value='${item?.id}' ${selected ? 'checked' : ''}/> ${item}"
             out << "</label>"
             out << "</div>"
         }
-
-
     } 
+
+    /**
+      * Renders a one-to-many pillbox control (requires select2 js lib)
+      * If dataSet is provided, group will be rendered out of it
+      * If dataSet is not provided, full data set of associated class will 
+      * be used
+      *
+      * @attr values REQUIRED
+      * @attr persistentProperty 
+      * @attr dataSet 
+      */
+    def pillBox = { attrs, body -> 
+        // Data to be loaded
+        def propertyName = attrs.propertyName
+        def values = attrs.values
+        def dataSet = attrs.dataSet
+        def persistentProperty = attrs.persistentProperty
+        // if dataset is not explicitelly defined - use association class
+        if( !dataSet ){
+            Class referencedPropertyType
+            if (persistentProperty instanceof GrailsDomainClassProperty) {
+                GrailsDomainClassProperty gdcp = ((GrailsDomainClassProperty) persistentProperty)
+                referencedPropertyType = gdcp.referencedPropertyType
+            } else if (persistentProperty instanceof Association) {
+                Association prop = ((Association) persistentProperty)
+                PersistentEntity entity = prop.getAssociatedEntity()
+                if (entity != null) {
+                    referencedPropertyType = entity.getJavaClass()
+                } else if (prop.isBasic()) {
+                    referencedPropertyType = ((Basic)prop).getComponentType()
+                }
+            }
+
+            dataSet = referencedPropertyType?.list()
+        }
+
+        out << select( name: propertyName,
+                       from: dataSet,
+                       value: values,
+                       optionKey: 'id',
+                       class: "form-control select2" )
+
+
+    }     
 
 }
 
