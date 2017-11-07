@@ -32,10 +32,10 @@ panel have less than three buttons */
 }
 
 
-/* Set max-width to be able to fit grails error messages*/
+/* Validation warning area (icon and message) */
 
-.item .alert {
-    max-width: 100%;
+.warning-sign {
+    color: #a94442;
 }
 
 

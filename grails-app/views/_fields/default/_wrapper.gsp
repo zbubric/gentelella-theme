@@ -4,17 +4,16 @@
     </label>
     <div class="col-md-6 col-sm-6 col-xs-12">
         <%=widget%>
-
             <g:if test="${iconLeft}">
                 <gent:fieldIcon icon='${iconLeft}' side='left' />
             </g:if>
             <g:elseif test="${iconRight}">
                 <gent:fieldIcon icon='${iconRight}' side='right' />
             </g:elseif>
-            <g:if test="${invalid} ">
-                <div class="alert ">${errors.join('<br>')}</div>
-            </g:if>
     </div>
+    <g:if test="${invalid} ">
+        <i class="fa fa-warning warning-sign" data-toggle="tooltip" data-placement="right" title="" data-original-title="${errors.join('<br/>')}"></i>
+    </g:if>
 
 
 </div>
