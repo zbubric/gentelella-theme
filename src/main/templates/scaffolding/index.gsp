@@ -11,9 +11,10 @@
 
 <body>
 
-    <!--Flash info messages -->
+    <!-- Notifications -->
     <content tag="notifications">
-        <g:if test="${flash.message}">
+        <!--Flash info messages -->
+        <g:if test="\${flash.message}">
             <gent:pnotify type="info" title="Info">
                 ${flash.message}
             </gent:pnotify>
