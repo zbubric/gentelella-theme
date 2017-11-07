@@ -29,7 +29,7 @@ if (console) {
     }    
 } else {
     updateStatus "Cannot get console. Leaving script..."
-    
+    return   
 }
 
 // Copy gentelella theme files
@@ -52,7 +52,6 @@ copy {
     from resources("/gentelella/static-views/*.gsp")
     into "grails-app/views"
 }
-
 
 // Replace original templates with gentelella-customised ones
 updateStatus "Copying gentelella scaffolding templates"
