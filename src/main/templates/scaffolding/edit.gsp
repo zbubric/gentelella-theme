@@ -16,7 +16,7 @@
         <!--Flash info messages -->
         <g:if test="\${flash.message}">
             <gent:pnotify type="info" title="Info">
-                ${flash.message}
+                \${flash.message}
             </gent:pnotify>
         </g:if>
 
@@ -60,8 +60,8 @@
                         <div class="form-group">
                             <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                                 <g:submitButton name="save" class="save btn btn-success" value="\${message(code: 'default.button.save.label', default: 'save')}" />
-                                <g:link class="btn btn-primary" controller="${propertyName}" action="index">${message(code: 'default.button.cancel.label', default: 'cancel')}</g:link>
-                                <button class="btn btn-primary" type="reset">${message(code: 'default.button.reset.label', default: 'reset')}</button>
+                                <g:link class="btn btn-primary" controller="${propertyName}" action="index">\${message(code: 'default.button.cancel.label', default: 'cancel')}</g:link>
+                                <button class="btn btn-primary" type="reset">\${message(code: 'default.button.reset.label', default: 'reset')}</button>
                             </div>
                         </div>
 

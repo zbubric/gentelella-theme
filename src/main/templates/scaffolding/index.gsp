@@ -16,7 +16,7 @@
         <!--Flash info messages -->
         <g:if test="\${flash.message}">
             <gent:pnotify type="info" title="Info">
-                ${flash.message}
+                \${flash.message}
             </gent:pnotify>
         </g:if>
     </content>

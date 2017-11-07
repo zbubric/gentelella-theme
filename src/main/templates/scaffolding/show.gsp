@@ -17,18 +17,9 @@
         <!--Flash info messages -->
         <g:if test="\${flash.message}">
             <gent:pnotify type="info" title="Info">
-                ${flash.message}
+                \${flash.message}
             </gent:pnotify>
         </g:if>
-
-        <!--Error messages -->
-        <g:hasErrors bean="\${this.${propertyName}}">
-            <gent:pnotify type="error" title="Error">
-                <g:eachError bean="\${this.${propertyName}}" var="error">
-                    <g:message error="\${error}" /> <br/>
-                </g:eachError>
-            </gent:pnotify>
-        </g:hasErrors>
     </content>
 
     <div class="row">
