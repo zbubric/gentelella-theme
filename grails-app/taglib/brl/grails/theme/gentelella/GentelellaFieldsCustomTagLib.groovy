@@ -36,18 +36,24 @@ class GentelellaFieldsCustomTagLib{
             // list of types that can apply mask
             final maskedTypes = [String, Number, URL, Date, Calendar, java.sql.Date, java.sql.Time]
 
-            // get bean name
-            def bean
-            if( attrs.bean ){
+            // get bean name from stack (if using f:all or f:with)
+            def bean = formFieldsTagLib.getBeanStack()?.bean
+            if( !bean ){
                 // get bean name from page scope variables (case for f:field)
                 bean = pageScope.variables[attrs.bean]
-            } else {
-                // get bean name from bean stack (case for f:all and f:with)
-                bean = formFieldsTagLib.getBeanStack().bean
-            }
+            } 
 
             // resolve property
             BeanPropertyAccessor propertyAccessor = beanPropertyAccessorFactory.accessorFor(bean, attrs.property)     
+
+            println "BEAN: " + bean
+            println "PROPERTY: " + attrs.property
+            println ""
+            println ""
+
+            propertyAccessor.properties.each{
+                //println it
+            }
 
             if( propertyAccessor ){
                 // field type
@@ -55,7 +61,7 @@ class GentelellaFieldsCustomTagLib{
                 // widget class (as defined in gsp tag)
                 def widgetClass = attrs.'widget-class' ?: ''
 
-                // set base css class depending on widget type
+                // set base css class depending on widget type        
                 if( type in [boolean, Boolean] ){                
                     widgetClass += "flat"
                 } else {
