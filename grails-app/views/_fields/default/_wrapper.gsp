@@ -11,7 +11,7 @@
                 <gent:fieldIcon icon='${iconRight}' side='right' />
             </g:elseif>
     </div>
-    <g:if test="${invalid} ">
+    <g:if test="${invalid}">
         <i class="fa fa-warning warning-sign" data-toggle="tooltip" data-placement="right" title="" data-original-title="${errors.join('<br/>')}"></i>
     </g:if>
 
