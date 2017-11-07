@@ -70,7 +70,6 @@ class GentelellaLayoutTagLib {
                                                 li{
                                                     // if direct href is not defined - create g:link
                                                     if( !item.href ){
-                                                        println item.params
                                                         mkp.yieldUnescaped(                                                             
                                                             g.link(
                                                                 controller: item.controller, 
