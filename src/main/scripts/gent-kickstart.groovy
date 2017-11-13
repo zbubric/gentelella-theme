@@ -6,9 +6,12 @@ Following files and folders will be created or overwritten (if exists):
     - gentelella layout files
         grails-app/views/layouts/gentelella.gsp
     - Static View Files:
-        grails-app/views/error.gsp
         grails-app/views/index.gsp
-        grails-app/views/notFound.gsp        
+        grails-app/views/login.gsp
+        grails-app/views/error.gsp
+        grails-app/views/notFound.gsp
+        grails-app/views/forbidden.gsp
+        grails-app/views/plainPage.gsp    
     - gentelella menu config file
         grails-app/conf/menuConf.json        
     - Scaffolding templates: 
