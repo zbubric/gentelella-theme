@@ -159,4 +159,3 @@ groovydoc.destinationDir = new File(buildDir, 'docs/api')
 
 
 task docs(dependsOn:[groovydoc, asciidoctor])
-
