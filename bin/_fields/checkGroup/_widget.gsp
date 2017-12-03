@@ -1,1 +1,0 @@
-<gent:checkBoxGroup propertyName="${property}" values="${value}" persistentProperty="${persistentProperty}" />
