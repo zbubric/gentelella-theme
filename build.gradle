@@ -18,7 +18,7 @@ plugins {
   id 'org.asciidoctor.convert' version '1.5.3'
 }
 
-version "0.1.0"
+version "0.1.0-SNAPSHOT"
 group "org.grails.plugins"
 
 apply plugin:"eclipse"
@@ -75,8 +75,11 @@ bootRun {
 }
 // enable if you wish to package this plugin as a standalone application
 bootRepackage.enabled = false
+
 grailsPublish {
-    githubSlug = 'foo/bar'
+    user = System.getenv("BINTRAY_USER") ?: project.bintrayUser
+    key = System.getenv("BINTRAY_KEY") ?: project.bintrayKey
+    githubSlug = 'zbubric/gentelella-theme'
     license {
         name = 'MIT'
     }
@@ -156,4 +159,3 @@ groovydoc.destinationDir = new File(buildDir, 'docs/api')
 
 
 task docs(dependsOn:[groovydoc, asciidoctor])
-
