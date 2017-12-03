@@ -1,0 +1,58 @@
+:imagesdir: images
+
+Gentelella theme plugin defines set of custom taglibs that can be used for adopting Grails application to Gentelella look&feel.
+Taglibs provided by plugin can be divided into three groups, depending on their scope:
+
+Layout widgets:: Taglibs for general layout commponents (areas)
+Form controls:: Taglibs implementing customised form conrols
+General widgets:: Taglibs for other widgets
+
+While (on source-code level) taglib implementations are separated into mutliple files they all share same namespace (gent)
+
+=== Layout widgets
+
+Following taglibs are available from Layout widgets group:
+
+[cols="1,3,6,1", options="header"]
+.Layout widgets overview
+|===
+|Taglib |Example |Purpose | Docs
+
+|navTitle
+|Render *Site Title* area.
+|`<gent:navTitle siteTitle="Gentelella Theme" siteIcon="fa fa-paw" />`
+|link:../../api/brl/grails/theme/gentelella/GentelellaLayoutTagLib.html#navTitle[ApiDoc].
+
+|profileInfo
+|Renders *Profile Info* area
+|`<gent:profileInfo name="John Doe" greeting="Howdy, " />`
+|link:../../api/brl/grails/theme/gentelella/GentelellaLayoutTagLib.html#navTitle[ApiDoc].
+
+|mainMenu
+|Renders *Main Menu* area
+|`<gent:mainMenu />`
+|link:../../api/brl/grails/theme/gentelella/GentelellaLayoutTagLib.html#navTitle[ApiDoc].
+
+|topMenu
+|Renders a *Top menubar* area
+|`<gent:topMenu>`
+|link:../../api/brl/grails/theme/gentelella/GentelellaLayoutTagLib.html#navTitle[ApiDoc].
+
+|topMenuDropdown
+| Description
+|`types +
+ +
+ +
+ +
+ asdas`
+|link:../../api/brl/grails/theme/gentelella/GentelellaLayoutTagLib.html#navTitle[ApiDoc].
+
+|topMenuPresentation
+| Description
+|`types`
+|link:../../api/brl/grails/theme/gentelella/GentelellaLayoutTagLib.html#navTitle[ApiDoc].
+|===
+
+=== Form controls
+
+=== General widgets

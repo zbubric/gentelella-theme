@@ -1,0 +1,193 @@
+:imagesdir: images
+
+Gentelella menu structure is implemented as:
+
+* Main (side-bar) menu located on left side of screen
+* Drop-down menu located on right side of top bar
+
+=== Main menu
+
+Main menu consist out of sub-menues containing actual links. 
+Furthermore, sub-menues can be grouped into sections as shown:
+ 
+image::mainMenuStructure.png[Main menu structure]
+
+==== Configuring main menu
+
+Main menu structure is defined as json structure in menuConf file (/grails-app/conf/menuConf.json)
+
+[source,json]
+----
+{
+    "sections": [ // <1>
+        { // <2>
+            "caption": "SECTION #1", 
+            "menues": [ // <3>
+                { // <4>
+                    "caption": "SUB-MENU #1", 
+                    "icon": "fa fa-home",
+                    "items": [ // <5>
+                        { "caption": "Menu item 1", "href": "#" } // <6>                        
+                        { "caption": "Menu item 2", "href": "#" } // <6>
+                    ]
+                },
+                { // <4>
+                    "caption": "SUB-MENU #2",
+                    "icon": "fa fa-edit",
+                    "items": [
+                        { "caption": "Menu item 3", "href": "#" } // <6>
+                    ]
+                }
+            ]
+        }
+    ]
+}
+----
+<1> List of available sections (root element)
+<2> Single Section element
+<3> List of sub-menues within section
+<4> Single sub-menu element
+<5> List of menu items (links) within sub-menu
+<6> Single menu element (link)
+
+===== Defining section
+
+Section definition consist out of following properties:
+
+[cols="1,1,4", options="header"]
+.Section Properties
+|===
+|Name |Required |Description 
+
+|caption
+|yes
+|Caption (title) displayed in caption header +
+Visible while main menu is maximized. +
+Hidden if main menu is minimized (collapsed).
+
+|menues
+|true
+|(Ordered) List of sub-menues within section 
+|===
+
+.Example: Defining two empty sections
+[source,json]
+----
+{
+    "sections": [
+        {
+            "caption": "SECTION #1 Caption",
+    	    "menues": []
+        },
+        {
+            "caption": "SECTION #2 Caption",
+    	    "menues": []
+        }        
+    ]
+}
+----
+
+===== Defining submenu
+
+Sub-menu definition consist out of following properties:
+
+[cols="1,1,4", options="header"]
+.Sub-menu Properties
+|===
+|Name |Required |Description 
+
+|caption
+|yes
+|Caption (title) displayed in submenu header +
+Visible while main menu is maximized.
+Replaced with icon when main menu is minimized (collapsed).
+
+|icon
+|true
+|Icon class (Font awesome or Glyphicons) to be displayed in sub-menu header. + 
+Visible if main menu is minimized (collapsed)
+
+|items
+|true
+|(Ordered) List of menu item within sub-menu
+|===
+
+.Example: Single section with two empty sub-menues
+[source,json]
+----
+{
+    "sections": [
+        {
+            "caption": "SECTION #1",
+            "menues": [
+                {
+                    "caption": "SUB-MENU #1",
+                    "icon": "fa fa-home",
+                    "items": []
+                },
+                {
+                    "caption": "SUB-MENU #2",
+                    "icon": "fa fa-edit",
+                    "items": []
+                }
+            ]
+        }
+    ]
+}
+----
+
+===== Defining menu item
+
+Menu Item definition consist out of following properties:
+
+[cols="1,1,4", options="header"]
+.Menu item Properties
+|===
+|Name |Required |Description 
+
+|caption
+|yes
+|Link title 
+
+|href
+|no
+|Link adress (href) +
+If defined, it has precedence over other properties ('grails link' construction elements)
+
+|controller
+|no
+|The name of the controller to use in the link; if not specified the current controller will be linked
+
+|action
+|no
+|the name of the action to use in the link; if not specified the default action will be linked
+
+|id
+|no
+|the id to use in the link
+|===
+
+.Example: Sample sub-menu with different menu item types:
+[source,json]
+----
+{
+    "caption": "SUB-MENU #1",
+    "icon": "fa fa-home",
+    "items": [
+        { "caption": "Menu item 1", "href": "http://somesite.com/contact" }, // <1>
+        { "caption": "Menu item 2", "controller": "someController" }, // <2>
+        { "caption": "Menu item 3", "controller": "someController", "action": "list" }, // <3>
+        { "caption": "Menu item 4", "controller": "someController", "action": "view", "id": "99" } // <4>
+        { "caption": "Menu item 4", "href": "/dummy", "controller": "someController", "action": "view" } // <5>
+    ]
+},
+----
+<1> Direct href link
+<2> Link to controller (default action)
+<3> Link to specific action of controller
+<4> Link to specific action of controller, providing id param
+<5> Direct href link will be genrated since href have precedence among other elements
+
+=== Top menu
+
+TODO: add chapter

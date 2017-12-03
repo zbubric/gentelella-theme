@@ -1,0 +1,42 @@
+
+Gentelella theme plugin is a port of https://github.com/puikinsh/gentelella[Gentelella theme] for Grails 3.x framework. It provides adapted layout, 
+fields rendering and scaffolding templates needed to style your Grails application with Gentelella theme.
+
+While Original Gentelella provides full-featured admin template, Grails port integrate just most basic parts of it:
+
+* Gentelella theme look & feel, including layout and styling
+* Configurable menu
+* Customised scaffolding for CRUD forms
+* Set of additional form control widgets (DateTimePicker, Typeahead, Tag pillbox etc..)
+
+=== Installation
+
+To add the Gentelella theme plugin to an application add the following dependency to the dependencies block of your build.gradle:
+
+[source,groovy,subs="attributes"]
+compile "org.grails.plugins:gentelella-theme:{version}"
+
+=== Kickstart
+
+After the installation, gent-kickstart script need to be executed in order to copy needed files to 
+structure of your project 
+
+[source,groovy]
+gent-kickstart
+
+WARNING: gent-kickstart script will create or overwrite some files (full list at <<gent-kickstart>>) 
+within your project +
+It is recomended to backup your files before runing the script! +
+
+=== Next steps
+Configuring menu: 
+
+Edit /grails-app/conf/menuConf.json file to define content of main menu. 
+
+CRUD generation:
+
+Kickstart script installs customised scaffolding templates into project structure so, 
+any further usage of Grails __generate-view__ command should generate views 
+
+[source,groovy]
+generate-views *

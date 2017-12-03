@@ -3,42 +3,17 @@
 :email: zbubric@gmail.com
 :source-highlighter: coderay
 :numbered:
+:imagesdir: {images}
 
 == Introduction
-
 include::introduction.ad[]
 
-== Installation
+== UI Layout
+include::layout.ad[]
+include::menu.ad[]
 
-include::installation.ad[]
-
-== Usage
-
-include::usage.ad[]
-
-== Further modifications
-
-== Layouts
-=== Main layout 
-=== Base layout
-
-== Custom Pages
-=== Default page (index)
-=== Plain page
-=== Login 
-=== 500 (error)
-=== 404 (not found)
-=== 403 (forbidden)
-
-== CRUD scaffolding
-
-== Field control widgets
-=== DateTimePicker
-=== Masked input
-=== Typeahead
-=== Pillbox
-=== oneToMany
-=== checkGroup
+== Taglibs
+include::taglibs.ad[]
 
 == Scripts
 === gent-kickstart

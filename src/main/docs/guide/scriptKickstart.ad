@@ -1,0 +1,49 @@
+Purpose of gent-kickstart script is to copy all files needed to achieve Gentelella look&feel into
+structure of your project. +
+
+Script can be executed from grails console:
+[source,groovy]
+gent-kickstart
+
+List of files/folders that should be copied to project structure:
+
+[cols=3*,options=header]
+|===
+|Type
+|Target folder
+|File names
+
+|Gentelella layout files
+|grails-app/views/layouts
+|gentelella.gsp +
+gentelellaBase.gsp
+
+|Static View Files
+|grails-app/views
+|index.gsp
+login.gsp
+error.gsp
+notFound.gsp
+forbidden.gsp
+plainPage.gsp
+
+|Menu config file
+|grails-app/conf
+|menuConf.json
+
+|Scaffolding templates
+|src/main/templates
+|*.*
+|===
+
+WARNING: If some files or folders is already present in your project structure, script will overwrite it! +
+It is recomended to backup your files before runing the script! +
+
+
+
+
+
+
+
+
+

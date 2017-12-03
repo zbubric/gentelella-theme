@@ -1,0 +1,53 @@
+:imagesdir: images
+
+Gentelella theme is a dashboard template with top navbar and collapsable menu bar on left side.
+Template itself consist out of folowing building blocks:
+ 
+image::fullLayout.PNG[Gentelella layout structure]
+
+Within Grails plugin, theme layout is implemented through set of taglibs nested within Grails layout page definition.
+Grails layout page should be copied to host project for further customisations (done automatically within gent-kickstart script execution).
+
+=== Sidebar
+
+Sidebar consist out of following areas:
+
+* Site title area
+* Profile info widget
+* Main menu widget
+* Footer buttons area
+
+Sidebar toggle button (and behaviour) is provided out-of-box by Gentelella theme.
+
+==== Site title
+
+Site title area is used for displaying site title and logo (icon).
+In case of collapsed sidebar, only logo icon is displayed while title should be hidden.
+
+Site title widget is implemented as taglib and can be used as:
+
+[source,html]
+----
+<gent:navTitle siteTitle="Gentelella Theme" siteIcon="fa fa-paw" />
+----
+
+Full list of taglib options can be found at link:../../api/brl/grails/theme/gentelella/GentelellaLayoutTagLib.html#navTitle[ApiDoc].
+
+==== Profile info
+
+Profile info area can be used to diplay basic user information (e.g. username, full name, etc..), profile image and greeting message.
+Profile info area is visible only when sidebar is expanded, otherwise is hidden.
+
+Profile info widget is implemented as taglib and can be used as:
+
+[source,html]
+----
+<gent:profileInfo name="John Doe" greeting="Howdy, " />
+----
+
+Full list of taglib options can be found at link:../../api/brl/grails/theme/gentelella/GentelellaLayoutTagLib.html#profileInfo[ApiDoc].
+
+
+
+
+
