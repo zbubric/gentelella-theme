@@ -1,14 +1,24 @@
+language: groovy
+
 sudo: false # run on container-based infrastructure
+
 before_cache:
   - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+
 cache:
   directories:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
     - $HOME/.m2/repositories/
-language: groovy
+
 before_install:
-- chmod +x gradlew
+  - chmod +x gradlew
+
+before_script:
+  - rm -rf target
+
+script: ./travis-build.sh
+
 env:
   global:
   - secure: Shj7fa9fEXsRTgdpo0WYy2UmexmjaVfrIreVgVLm3Ipkl3aUkA0VoruUCpeuWV92atcwCw+79DUTJ0dfJVa1pzKAXuN5FzU+8y6Bxsy2Wy3UxMFh3UM1DjxZUiUm4FA4GlgRag2NYxmnuOeVQkgI6P1zpWLHNfLYZK2NvXAvnQaS9SJDTfwUJKtlKjBq0Dm3TYDDx3gmexJRWhjx00rrZg46yKCzZc3UNvqNKSS819jCj+8uyBQ8E81uh0d4zbauERy9juowHmd1CrPwvmpXDlbESgdnzT4VCyZ9H/N6Zmccuyf3p2LHmA2/JQjmj1vtHM+b30nKiEdwe7+BtOjKaXiE4XsF6AfvJLYfhDaNIjCzVo1FugQOjE/3YGV1YUJ2oM9NSH/soW8ndrd6CVem/oE2U79xOB3kU91FEHJG9PsRx1aKs5IuYxpgV9iYXr0SKKEig+qRkErLt7FCSge+kJFRYU3MhDLpxGYDTCG4gVh2dkOp89oIJCNwQgMOAFiBF5UM7C7//63xI+36Zw6A1VXS3jjQE/hGQ01TuUfwp9fRGLe5ZVIkU6foWublw08m/xm/o4Q4V7gg5WuFJeRo3I0jJymy5ze2pX3wi3qCjAFuBDXQ8a4ppKJhOBNK8drWsT/47xXFfkz3uDUSDYCcC7HgsbDMgypDpMONqLxgobU=
