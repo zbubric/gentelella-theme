@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+echo "Starting custom Travis script..."
 
 set -e
 ./gradlew clean check assemble --stacktrace
