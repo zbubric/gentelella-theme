@@ -16,6 +16,7 @@ before_install:
 
 before_script:
   - rm -rf target
+  - chmod 755 travis-build.sh
 
 script: ./travis-build.sh
 
