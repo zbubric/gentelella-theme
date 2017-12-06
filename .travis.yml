@@ -9,6 +9,7 @@ cache:
     - $HOME/.m2/repositories/
 before_install:
   - chmod +x gradlew
+  - chmod +x travis-build.sh  
 script: 
   - ./travis-build.sh
 env:
