@@ -1,20 +1,21 @@
 language: groovy
-sudo: false # run on container-based infrastructure
+sudo: false
 before_cache:
-  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
-    - $HOME/.m2/repositories/
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
+  - "$HOME/.m2/repositories/"
 before_install:
-  - chmod +x gradlew
-  - chmod +x travis-build.sh  
-script: 
-  - ./travis-build.sh
+- chmod +x gradlew
+- chmod +x travis-build.sh
+script:
+- "./travis-build.sh"
 env:
   global:
   - GIT_NAME="Zoran Bubric"
   - GIT_EMAIL="zbubric@gmail.com"
   - secure: Shj7fa9fEXsRTgdpo0WYy2UmexmjaVfrIreVgVLm3Ipkl3aUkA0VoruUCpeuWV92atcwCw+79DUTJ0dfJVa1pzKAXuN5FzU+8y6Bxsy2Wy3UxMFh3UM1DjxZUiUm4FA4GlgRag2NYxmnuOeVQkgI6P1zpWLHNfLYZK2NvXAvnQaS9SJDTfwUJKtlKjBq0Dm3TYDDx3gmexJRWhjx00rrZg46yKCzZc3UNvqNKSS819jCj+8uyBQ8E81uh0d4zbauERy9juowHmd1CrPwvmpXDlbESgdnzT4VCyZ9H/N6Zmccuyf3p2LHmA2/JQjmj1vtHM+b30nKiEdwe7+BtOjKaXiE4XsF6AfvJLYfhDaNIjCzVo1FugQOjE/3YGV1YUJ2oM9NSH/soW8ndrd6CVem/oE2U79xOB3kU91FEHJG9PsRx1aKs5IuYxpgV9iYXr0SKKEig+qRkErLt7FCSge+kJFRYU3MhDLpxGYDTCG4gVh2dkOp89oIJCNwQgMOAFiBF5UM7C7//63xI+36Zw6A1VXS3jjQE/hGQ01TuUfwp9fRGLe5ZVIkU6foWublw08m/xm/o4Q4V7gg5WuFJeRo3I0jJymy5ze2pX3wi3qCjAFuBDXQ8a4ppKJhOBNK8drWsT/47xXFfkz3uDUSDYCcC7HgsbDMgypDpMONqLxgobU=
   - secure: EfLQK4zK1GuL3DbADvzZoaDfbGoLt2Ay8AEBBdTgfKxQbB67FPRsAKOuKY/5OQok9Zi2Q1mJBFc6cP3oQ5bnBbaAaf5cp9DX7GlfC5uK0nKqP+l1N8hggX0hZPuYJk4mbxl0NwEl5GebQ2CTcQ/oUbbjbiEYs/Bcsw3yuDz0gEVvxCwudlvZUocsW/o3pQpMUc012ogxhGLSxhfmRZntmRHc0052eNhd0uT/k2kgJtbAHqnBbG2Iu91XKg1icp9iWEJBMTiWVSBa3mNj4y/bXfUYP5Yc1pZEPty10pDRp+6j0t/2s0QCUOi5Md5ZQ0m7KXmh8CdEwivLzG4kU24krFu6Y6CqzC9lNicAbgrl8YT3vtzbjPZIPAVWGhKLgd83zwdKCB2oylF4VTx2pzqDixJC4t23Uko31jpDUel4khmyn2xYPsvUyJDn5qJ1uQs1UWgwfcXSEvAOO43px8Ox4WB4nK9KM76GnhyP+sY9NJEb1Gk4o6waYK/LVJTlRw0oHt6VB0a37uq3o8SEP2S8auRDN+CsS8T6gktrth5Pvyi6qBgmMiLK0Brs9oPWc20ifvVP/SeZwoF0p6X/uaHItCLbnBKC5UhSlFsEOtiZW9HfCISbw2JDnIhnbp+qgDiQLAihwmh2yQMyD8WBevgRyCsOXZs4/6j8lIVO+7ecCSE=
+  - secure: bjRiGmUK9SRlYOtvLa3SQ9CbqkbSJ4MgwVbN0doxc6RykzBcfG2LN4USRM5UKqUbCc13QF985iTxU/GJ46NZA9cly/tx4QpUXQSw0xnKBJ4tJua9B/pRORQXGDCV5cV7WnQ3IKtdhSZOI332bYgGQnTLhy2miwlnMCL5QGVzKOoRYgjQsc6xqKl0m7vGHblSwRpA8BGTKjNHKhuEBW1V5S8XYv/JD7xLmmMF6T26+X0RO1ts9CGEMVGhrbJ/Em0IbtCqS38qaKYaWEyWW5/AeMSO5mwWhBKmyTynix0P6wzm9/j8VEJ7hHX4VVo8n2odr6t3bxX9TYrdr+V0fI+uWC+2DFqAkefhgfHDByl1H4PHRNllBaBfPMCQ6H5Yy4sM4KY6ONQqf6+DBnymsJtjlsAqjwA4lkjGwvCKzyF59blql8JVLFU6Zd6acRzfb1PIL8fQv4uoEa7C5URDw4nbadXkBxbyAYocJkIqsgI5Iw1qYD6xrvudTzF5HWdvDn0bixefBlYTGZYl2Qp81JW48DZOr1U60GPEZVEJksOS7k0ddHGEEVToWLvGfZM9ZyiHJ6NwLb4zsi3a7yuqFoWMLrsmKzN6NZirPvQLjMsifCo8WaplNchW8cdotC8EMn6++7gWQ3ep9U7GAmBE0OgsKcsp9t0xu/pROnPzRAAruCk=
