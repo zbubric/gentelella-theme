@@ -18,7 +18,7 @@ before_script:
   - rm -rf target
   - chmod 755 travis-build.sh
 
-script: 
+script:
   - ./gradlew clean check assemble --stacktrace
 
 env:
