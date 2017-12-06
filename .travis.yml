@@ -9,8 +9,8 @@ cache:
     - $HOME/.m2/repositories/
 before_install:
   - chmod +x gradlew
-script:
-  - ./gradlew clean check assemble --stacktrace
+script: 
+  - ./travis-build.sh
 env:
   global:
   - GIT_NAME="Zoran Bubric"
