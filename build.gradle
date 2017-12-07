@@ -16,6 +16,7 @@ buildscript {
 
 plugins {
   id 'org.asciidoctor.convert' version '1.5.3'
+  id "com.jfrog.artifactory" version "4.4.0"
 }
 
 version "0.1.0-SNAPSHOT"
@@ -89,6 +90,7 @@ grailsPublish {
     variety of powerful jQuery plugins and tools."""
     developers = [zbubric:"Zoran Bubric"]
 }
+
 artifactory {
     contextUrl = 'http://oss.jfrog.org'
     publish {
