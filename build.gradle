@@ -145,12 +145,20 @@ processResources.finalizedBy copyConfigs, copyScaffoldTemplates, copyStaticViews
 asciidoctor {
     sourceDir = file('src/main/docs/guide')
     outputDir = file('build/docs/guide')
+    separateOutputDirs=false
 
+    // copy 'redirection' html file
+    resources {
+        from(sourceDir) {
+            include 'index.html'
+        }
+        into '../'
+    }
+   
     attributes 'compat-mode'   : 'true',
             'toc'           : 'left',
             'icons'         : 'font',
-            'version'       : project.version
-    
+            'version'       : project.version    
 }
 
 
