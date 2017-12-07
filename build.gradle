@@ -18,7 +18,7 @@ plugins {
   id 'org.asciidoctor.convert' version '1.5.3'
 }
 
-version "0.1.0-SNAPSHOT"
+version "0.0.9"
 group "org.grails.plugins"
 
 apply plugin:"eclipse"
