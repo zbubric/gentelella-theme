@@ -22,4 +22,15 @@ Documentation can be found here ():
 - [Stable](https://zbubric.github.io/gentelella-theme/latest) version
 - [Snapshot](https://zbubric.github.io/gentelella-theme/snapshot) version
 
+# Roadmap
+
+## Rel 0.1.0 (SNAPSHOT version)
+Initial (mostly) working version.
+- [ ] Prepare user guide
+- [ ] Add tests for taglibs
+- [ ] Prepare sample project
+
+## Rel 0.0.9
+Initial (mostly) working version.
+Not for general usage.
 
