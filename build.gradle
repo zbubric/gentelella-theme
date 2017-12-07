@@ -18,7 +18,7 @@ plugins {
   id 'org.asciidoctor.convert' version '1.5.3'
 }
 
-version "0.0.9"
+version "0.1.0-SNAPSHOT"
 group "org.grails.plugins"
 
 apply plugin:"eclipse"
@@ -89,7 +89,19 @@ grailsPublish {
     variety of powerful jQuery plugins and tools."""
     developers = [zbubric:"Zoran Bubric"]
 }
-
+artifactory {
+    contextUrl = 'http://oss.jfrog.org'
+    publish {
+        repository {
+            repoKey = 'oss-snapshot-local'
+            username = System.getenv("BINTRAY_USER") ?: project.bintrayUser
+            password = System.getenv("BINTRAY_KEY") ?: project.bintrayKey
+        }
+        defaults {
+            publications('maven')
+        }
+    }
+}
 
 assets {
     packagePlugin = true
@@ -140,6 +152,7 @@ task copyConfigs(type: Copy) {
 
 // Make sure to actually copy needed files
 processResources.finalizedBy copyConfigs, copyScaffoldTemplates, copyStaticViews, copyThemeFiles, copyFieldsFiles, copyTableListFiles
+
 
 // asciidoc settings
 asciidoctor {
