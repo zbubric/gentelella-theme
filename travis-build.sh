@@ -11,11 +11,11 @@ echo "Publishing archives for branch $TRAVIS_BRANCH"
 if [[ -n $TRAVIS_TAG ]] || [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then
 
   if [[ -n $TRAVIS_TAG ]]; then
-       echo "Publishing archives: bintrayUpload"
-      ./gradlew bintrayUpload --debug || EXIT_STATUS=$?
+    echo "Pushing build to Bintray"
+    ./gradlew bintrayUpload --info || EXIT_STATUS=$?
   else
-      echo "Publishing archives: publish"
-      ./gradlew grailsPublish --debug || EXIT_STATUS=$?
+    echo "Publishing snapshot to OJO"
+    ./gradlew artifactoryPublish --info  || EXIT_STATUS=$?
   fi
 
   ./gradlew docs || EXIT_STATUS=$?
