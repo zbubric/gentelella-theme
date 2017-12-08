@@ -12,10 +12,10 @@ if [[ -n $TRAVIS_TAG ]] || [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST
 
   if [[ -n $TRAVIS_TAG ]]; then
        echo "Publishing archives: bintrayUpload"
-      ./gradlew bintrayUpload --info || EXIT_STATUS=$?
+      ./gradlew bintrayUpload --debug || EXIT_STATUS=$?
   else
       echo "Publishing archives: publish"
-      ./gradlew publish || EXIT_STATUS=$?
+      ./gradlew publish --debug || EXIT_STATUS=$?
   fi
 
   ./gradlew docs || EXIT_STATUS=$?
