@@ -14,7 +14,7 @@ if [[ -n $TRAVIS_TAG ]] || [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST
     echo "Pushing build to Bintray"
     ./gradlew bintrayUpload --info || EXIT_STATUS=$?
   else
-    echo "Publishing snapshot to OJO"
+    echo "Publishing snapshot to OJO with username $BINTRAY_USER"
     ./gradlew artifactoryPublish --debug  || EXIT_STATUS=$?
   fi
 
