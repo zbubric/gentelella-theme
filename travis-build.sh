@@ -12,7 +12,7 @@ if [[ -n $TRAVIS_TAG ]] || [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST
 
   if [[ -n $TRAVIS_TAG ]]; then
     echo "Pushing build to Bintray"
-    ./gradlew bintrayUpload --debug || EXIT_STATUS=$?
+    ./gradlew bintrayUpload --info || EXIT_STATUS=$?
   else
     echo "Publishing snapshot to OJO"
     ./gradlew artifactoryPublish --info  || EXIT_STATUS=$?

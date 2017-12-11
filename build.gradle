@@ -19,7 +19,7 @@ plugins {
   id "com.jfrog.artifactory" version "4.4.0"
 }
 
-version "0.0.9"
+version "0.1.0-SNAPSHOT"
 group "org.grails.plugins"
 
 apply plugin:"eclipse"
